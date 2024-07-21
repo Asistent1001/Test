@@ -1,0 +1,161 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+:root {
+  --project-black: #1a1a1a;
+  --project-white: #fafafa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--project-black);
+  -webkit-transition: 150ms;
+  transition: 150ms;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--project-white);
+}
+
+.logo span,
+.navigation-list span,
+.burger-menu span {
+  font-size: 25px;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 3px solid var(--project-black);
+}
+
+.navigation-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.navigation-list li,
+.navigation-list li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.navigation-list li i,
+.navigation-list li a i {
+  font-size: 15px;
+}
+.navigation-list li:hover,
+.navigation-list li a:hover {
+  cursor: pointer;
+  color: orangered;
+}
+.navigation-list li:hover i,
+.navigation-list li:hover span,
+.navigation-list li a:hover i,
+.navigation-list li a:hover span {
+  color: inherit;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.logo i {
+  font-size: 30px;
+}
+.logo:hover i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  color: orangered;
+}
+
+.burger-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  background-color: var(--project-white);
+  padding: 15px 25px;
+  border-radius: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.burger-menu i {
+  font-size: 20px;
+}
+.burger-menu:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+.active-web {
+  color: orangered;
+}
+.active-web i,
+.active-web span {
+  color: inherit;
+}

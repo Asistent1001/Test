@@ -1,0 +1,76 @@
+$reusedpx1: 20px;
+@mixin nav-items($f-size, $gap) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+  i {
+    font-size: $f-size;
+  }
+}
+.logo,
+.navigation-list,
+.burger-menu {
+  span {
+    font-size: 25px;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: $reusedpx1;
+  padding: $reusedpx1;
+  border-bottom: 3px solid var(--project-black);
+}
+
+.navigation-list {
+  display: flex;
+  gap: $reusedpx1 - 10px;
+  li,
+  li a {
+    @include nav-items(15px, $reusedpx1 - 15px);
+    user-select: none;
+
+    &:hover {
+      cursor: pointer;
+      color: orangered;
+      i,
+      span {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.logo {
+  @include nav-items(30px, $reusedpx1 - 10px);
+  user-select: none;
+  &:hover {
+    i {
+      transform: rotate(360deg);
+      color: orangered;
+    }
+  }
+}
+
+.burger-menu {
+  @include nav-items(20px, $reusedpx1 - 10px);
+  filter: invert(100%);
+  background-color: var(--project-white);
+  padding: 15px 25px;
+  border-radius: 20px;
+  user-select: none;
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+.active-web {
+  color: orangered;
+  i,
+  span {
+    color: inherit;
+  }
+}
